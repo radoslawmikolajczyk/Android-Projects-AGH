@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">NBP</string>
+    <string name="kursy_walut_text">Kursy Walut</string>
+    <string name="zloto_text">Złoto</string>
+    <string name="przelicznik_walut_text">Przelicznik walut</string>
+    <string name="nbp_app">NBP App</string>
+    <string name="connection_error_msg">Brak połączenia internetowego!</string>
+    <string name="dots_text">…</string>
+    <string name="gold_text">Kurs złota</string>
+    <string name="counter_text">Przelicznik Walut</string>
+    <string name="to_text">przelicz na</string>
+    <string name="count_text">Przelicz</string>
+    <string name="empty_string" />
+    <string name="input_number_error">Niepoprawna liczba! Popraw!</string>
+    <string name="score_text">Wynik:</string>
+</resources>

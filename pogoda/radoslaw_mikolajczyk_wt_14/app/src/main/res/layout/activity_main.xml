@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimage"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tempValueId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temp_value"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameId" />
+
+    <TextView
+        android:id="@+id/actualDateValueId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/actual_date"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempValueId" />
+
+    <TextView
+        android:id="@+id/cityNameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/city"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/cityInputTextId"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/empty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actualDateValueId"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/searchButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/search_city"
+        app:backgroundTint="#3F51B5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityInputTextId" />
+
+    <Button
+        android:id="@+id/localizationButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/localization_button_text"
+        app:backgroundTint="#3F51B5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchButtonId" />
+
+    <ImageView
+        android:id="@+id/cloudImageId"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/description_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/localizationButtonId"
+        app:srcCompat="@drawable/cloudss" />
+
+    <ImageView
+        android:id="@+id/windImageId"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/description_text"
+        app:layout_constraintEnd_toStartOf="@+id/humidityImageId"
+        app:layout_constraintStart_toEndOf="@+id/cloudImageId"
+        app:layout_constraintTop_toBottomOf="@+id/localizationButtonId"
+        app:srcCompat="@drawable/wind" />
+
+    <ImageView
+        android:id="@+id/humidityImageId"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:contentDescription="@string/description_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/localizationButtonId"
+        app:srcCompat="@drawable/humidity" />
+
+    <ImageView
+        android:id="@+id/sunriseImageId"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="18dp"
+        android:contentDescription="@string/description_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cloudImageId"
+        app:srcCompat="@drawable/sun" />
+
+    <ImageView
+        android:id="@+id/pressureImageId"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/description_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sunsetImageId"
+        app:layout_constraintStart_toEndOf="@+id/sunriseImageId"
+        app:layout_constraintTop_toBottomOf="@+id/windImageId"
+        app:srcCompat="@drawable/pressure" />
+
+    <ImageView
+        android:id="@+id/sunsetImageId"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/description_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidityImageId"
+        app:srcCompat="@drawable/sun" />
+
+    <TextView
+        android:id="@+id/cloudDescriptionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/cloudy_text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/cloudImageId"
+        app:layout_constraintStart_toStartOf="@+id/cloudImageId"
+        app:layout_constraintTop_toBottomOf="@+id/cloudImageId" />
+
+    <TextView
+        android:id="@+id/windyDescriptionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/windy_text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/windImageId"
+        app:layout_constraintStart_toStartOf="@+id/windImageId"
+        app:layout_constraintTop_toBottomOf="@+id/windImageId" />
+
+    <TextView
+        android:id="@+id/humidityDescriptionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/humidity_text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/humidityImageId"
+        app:layout_constraintTop_toBottomOf="@+id/humidityImageId" />
+
+    <TextView
+        android:id="@+id/sunriseDescriptionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sunrise_text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/sunriseImageId"
+        app:layout_constraintStart_toStartOf="@+id/sunriseImageId"
+        app:layout_constraintTop_toBottomOf="@+id/sunriseImageId" />
+
+    <TextView
+        android:id="@+id/pressureDescriptionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/pressure_text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/pressureImageId"
+        app:layout_constraintStart_toStartOf="@+id/pressureImageId"
+        app:layout_constraintTop_toBottomOf="@+id/pressureImageId" />
+
+    <TextView
+        android:id="@+id/sunsetDescriptionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sunset_text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/sunsetImageId"
+        app:layout_constraintStart_toStartOf="@+id/sunsetImageId"
+        app:layout_constraintTop_toBottomOf="@+id/sunsetImageId" />
+
+    <TextView
+        android:id="@+id/cloudInputId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/empty"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/cloudDescriptionId"
+        app:layout_constraintStart_toStartOf="@+id/cloudDescriptionId"
+        app:layout_constraintTop_toBottomOf="@+id/cloudDescriptionId" />
+
+    <TextView
+        android:id="@+id/windInputId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/empty"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/windyDescriptionId"
+        app:layout_constraintStart_toStartOf="@+id/windyDescriptionId"
+        app:layout_constraintTop_toBottomOf="@+id/windyDescriptionId" />
+
+    <TextView
+        android:id="@+id/humidityInputId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/empty"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/humidityDescriptionId"
+        app:layout_constraintStart_toStartOf="@+id/humidityDescriptionId"
+        app:layout_constraintTop_toBottomOf="@+id/humidityDescriptionId" />
+
+    <TextView
+        android:id="@+id/sunriseInputId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/empty"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/sunriseDescriptionId"
+        app:layout_constraintStart_toStartOf="@+id/sunriseDescriptionId"
+        app:layout_constraintTop_toBottomOf="@+id/sunriseDescriptionId" />
+
+    <TextView
+        android:id="@+id/pressureInputId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/empty"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/pressureDescriptionId"
+        app:layout_constraintStart_toStartOf="@+id/pressureDescriptionId"
+        app:layout_constraintTop_toBottomOf="@+id/pressureDescriptionId" />
+
+    <TextView
+        android:id="@+id/sunsetInputId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/empty"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/sunsetDescriptionId"
+        app:layout_constraintStart_toStartOf="@+id/sunsetDescriptionId"
+        app:layout_constraintTop_toBottomOf="@+id/sunsetDescriptionId" />
+
+    <TextView
+        android:id="@+id/errorMessageId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toTopOf="@+id/cityInputTextId"
+        app:layout_constraintEnd_toEndOf="@+id/actualDateValueId"
+        app:layout_constraintStart_toStartOf="@+id/actualDateValueId"
+        app:layout_constraintTop_toBottomOf="@+id/actualDateValueId" />
+
+    <ProgressBar
+        android:id="@+id/spinner"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="53dp"
+        android:layout_height="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

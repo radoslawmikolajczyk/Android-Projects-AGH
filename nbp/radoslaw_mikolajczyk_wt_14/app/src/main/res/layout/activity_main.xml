@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start_activity_background_color"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/kursyWalutOdnosnikId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/kursy_walut_text"
+        app:backgroundTint="@color/start_buttons_color"
+        app:layout_constraintBottom_toTopOf="@+id/zlotoOdnosnikId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.900" />
+
+    <Button
+        android:id="@+id/zlotoOdnosnikId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/zloto_text"
+        app:backgroundTint="@color/start_buttons_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/przelicznikOdnosnikId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/przelicznik_walut_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:backgroundTint="@color/start_buttons_color"
+        app:layout_constraintTop_toBottomOf="@+id/zlotoOdnosnikId"
+        app:layout_constraintVertical_bias="0.1000000" />
+
+    <TextView
+        android:id="@+id/helloTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nbp_app"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/kursyWalutOdnosnikId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.641" />
+
+    <TextView
+        android:id="@+id/errorConnectionMainId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/helloTextViewId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

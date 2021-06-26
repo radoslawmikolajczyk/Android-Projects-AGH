@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Pogoda</string>
+    <string name="temp_value">27°C</string>
+    <string name="actual_date">Aktualna data</string>
+    <string name="city">Miasto</string>
+    <string name="empty" />
+    <string name="search_city">Wyszukaj</string>
+    <string name="localization_button_text">Użyj lokalizacji</string>
+    <string name="description_text">Description</string>
+    <string name="cloudy_text">Zachmurzenie</string>
+    <string name="windy_text">Wiatr</string>
+    <string name="humidity_text">Wilgoć</string>
+    <string name="sunrise_text">Wschód słońca</string>
+    <string name="pressure_text">Ciśnienie</string>
+    <string name="sunset_text">Zachód słońca</string>
+    <string name="api_key">ee2f2ecdf7d83bdd0ed8944742b35a1f</string>
+    <string name="no_network_error_message">Brak sieci!</string>
+    <string name="wrong_input_error">Niepoprawnie wprowadzona nazwa miasta!</string>
+    <string name="city_not_found">Nie znaleziono miasta!</string>
+    <string name="launch_location_message">Uruchom lokalizację!</string>
+    <string name="location_error">Błąd lokalizacji!</string>
+    <string name="grant_permission_and_click_again">Przyznaj dostęp do lokalizacji i kliknij ponownie!</string>
+</resources>
